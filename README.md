@@ -1,9 +1,8 @@
 # PointCountFM
-[![Python Version](https://img.shields.io/badge/Python_3.13-306998?logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch Version](https://img.shields.io/badge/PyTorch_2.8-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/FLC-QU-hep/PointCountFM?tab=MIT-1-ov-file)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/FLC-QU-hep/PointCountFM/pre_commit.yaml?label=pre-commit&logo=github)](https://github.com/FLC-QU-hep/PointCountFM/actions/workflows/pre_commit.yaml)
-[![Tests](https://img.shields.io/github/actions/workflow/status/FLC-QU-hep/PointCountFM/test.yaml?label=tests&logo=github)](https://github.com/FLC-QU-hep/PointCountFM/actions/workflows/test.yaml)
+
+
+This is forked of [PointCloudFM github repo](https://github.com/FLC-QU-hep/PointCountFM/tree/main) with some modifications to make it work for other use cases we are considering.
+
 
 A conditional flow matching model to generate the number of points per layer in a particle shower. The model can be used as part of a generative model for particle showers. It generates the number of points per layer in a particle shower given the incident particle type and kinematics.
 
@@ -36,7 +35,7 @@ A conditional flow matching model to generate the number of points per layer in 
 ### Clone repository
 To clone the repository, run:
 ```bash
-git clone git@github.com:FLC-QU-hep/PointCountFM.git
+git clone git@github.com:hamzahanif2210/PointCountFM.git
 cd PointCountFM
 ```
 
@@ -82,7 +81,8 @@ If you want to use you own data, store it in HDF5 format with the following keys
 | labels     | (n)    | int32   | incident particle labels                          |
 | num_points | (n, m) | int32   | number of points per layer                        |
 
-n is the data set size and m is the number of layers in the calorimeter, which needs to be consistent with `dim_input` in the configuration file.
+n is the data set size and m is the number of layers in the calorimeter, which needs to be consistent with `dim_input` in the configuration file. To create a dataset please use this script `create_dataset.py` in pointcloudfm folder.
+
 
 ## Usage
 The main entry point is the `pointcountfm/trainer.py` script. It can be run with the following command:

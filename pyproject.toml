@@ -3,7 +3,6 @@ name = "PointCountFM"
 version = "0.2.0"
 description = "A conditional flow matching model to generate the number of points per layer in a calorimeter shower"
 readme = "README.md"
-requires-python = ">=3.13, <3.14"
 license = "MIT"
 authors = [
     {name = "Thorsten Buss", email = "thorsten.buss@uni-hamburg.de"}
@@ -12,7 +11,7 @@ keywords = ["machine learning", "flow matching", "particle physics", "pytorch"]
 classifiers = [
     "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]

@@ -5,6 +5,13 @@ from collections.abc import Iterable
 import showerdata
 import torch
 
+'''
+python /n/home04/hhanif/PointCountFM/pointcountfm/inference_cond_file.py \
+    /n/home04/hhanif/PointCountFM/results/20260301_125736_PointCountFM/compiled.pt \
+    /n/holylfs05/LABS/arguelles_delgado_lab/Everyone/hhanif/tambo_simulations/all_shower_processed_step1_v3/merged_all_showers_test.h5 \
+    --output /n/holylfs05/LABS/arguelles_delgado_lab/Everyone/hhanif/tambo_simulations/all_shower_processed_step1_v3/merged_all_showers_test_with_points.h5 \
+    --pdg-codes 11 211
+'''
 
 def parse_args(args: list[str] | None = None):
     parser = argparse.ArgumentParser(description="Inference on a model")
